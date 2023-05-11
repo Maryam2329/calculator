@@ -137,4 +137,11 @@ let calculator = function (){
     let firstOperand=0;
     let secondOperand=0;
     let Operator='';
+    // pour les clicks sur numeros, je sais pas trop comment faire pour l'ordre
+    // rajouter un clear button
+    for (i=0;i<operatorButton.length;i++){
+        operatorButton[i].addEventListener('click',()=>{
+            // transformer les list de button numeros/operator/etc en listes d'objects, avec 2 clés : le character affiché et l'objet
+        });
+    }
 }
