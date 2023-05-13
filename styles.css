@@ -1,0 +1,109 @@
+/* GRAPHICS */
+
+h1{
+    text-align: center;
+}
+
+.number_even,
+.number_odd,
+.operator,
+.zero,
+.equal,
+.clear,
+.result,
+.back{
+    height: 70px;
+    font-size: 30px;
+    color: black;
+    border: 2px solid darkblue;
+    margin: 15px;
+}
+
+.number_even,
+.number_odd,
+.operator {
+    width: 70px;
+    border-radius: 50%;
+}
+
+.clear,
+.back{
+    width: 100px;
+    border-radius: 50%;
+}
+
+.zero,
+.equal{
+    width: 170px;
+    border-radius: 50%;
+}
+
+.result{
+    width: 270px;
+    border-radius: 15%;
+}
+
+.number_even,
+.zero{
+    background-color: darkgreen;
+}
+
+.number_odd{
+    background-color: lightpink;
+}
+
+.operator{
+    background-color: yellow;
+}
+
+.equal,
+.result{
+    background-color: orange;
+}
+
+.clear,
+.back{
+    background-color: red;
+}
+
+.sub_box{
+    width: 400px;
+    border: 4px solid darkblue; 
+    background-color: lightslategray;
+    margin: 0;
+    padding: 0;
+}
+
+.calc{
+    height: 600px;
+}
+
+/* FLEX */
+
+.box{
+    display: flex;
+    flex-direction: column;
+}
+
+.calc{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.n1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.n3{
+    display: flex;
+    flex-direction: column;
+}
+
+.n2,
+.line,
+.n4{
+    display: flex;
+}
