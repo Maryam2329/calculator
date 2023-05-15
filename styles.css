@@ -78,6 +78,14 @@ h1{
     height: 600px;
 }
 
+button:hover{
+    border: 2px solid red;
+}
+
+.active{
+    border: 2px solide red;
+}
+
 /* FLEX */
 
 .box{

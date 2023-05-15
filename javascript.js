@@ -87,6 +87,14 @@ let calculator = function(){
             }
             currentState.ope=operatorSymbolList[j];
             currentState.indic_ope=true;
+            // highlight active part
+            var currentActive = document.getElementsByClassName("active");
+            if (currentActive.length==0){
+                this.className += " active"; 
+            } else {
+                currentActive[0].className = current[0].className.replace(" active", "");
+                this.className += " active"; 
+            }  
         });
     }
     // recuperation of number buttons in a list d'objets
@@ -101,7 +109,15 @@ let calculator = function(){
             } else{
                 currentState.num1_string+=i.toString();
                 resultZone.textContent=currentState.num1_string;
-            };        
+            };  
+            // highlight active part
+            var currentActive = document.getElementsByClassName("active");
+            if (currentActive.length==0){
+                this.className += " active"; 
+            } else {
+                currentActive[0].className = current[0].className.replace(" active", "");
+                this.className += " active"; 
+            }  
         });
     }
     
@@ -144,7 +160,14 @@ let calculator = function(){
         } else {
             alert('The operation has not been done because the operator is missing.');
         }
-        
+        // highlight active part
+        var currentActive = document.getElementsByClassName("active");
+        if (currentActive.length==0){
+            this.className += " active"; 
+        } else {
+            currentActive[0].className = current[0].className.replace(" active", "");
+            this.className += " active"; 
+        }
     })
     // click event on clear
 
@@ -160,21 +183,32 @@ let calculator = function(){
         currentState.indic_res=false;
         // erase the result zone
         resultZone.textContent='0';
+        // highlight active part
+        var currentActive = document.getElementsByClassName("active");
+        if (currentActive.length==0){
+            this.className += " active"; 
+        } else {
+            currentActive[0].className = current[0].className.replace(" active", "");
+            this.className += " active"; 
+        }
     });    
     // click event on back
     backButton.addEventListener('click',()=>{
         currentState=Object.assign({},oldState);
         // display
-        console.log(currentState);
         if(currentState.indic_ope && !(currentState.num2_string=="")){
-            console.log('ici');
-            console.log(currentState.num2_string);
             resultZone.textContent=currentState.num2_string;
         } else {
-            console.log(currentState.num1_string);
             resultZone.textContent=currentState.num1_string;
         }
-        
+        // highlight active part
+        var currentActive = document.getElementsByClassName("active");
+        if (currentActive.length==0){
+            this.className += " active"; 
+        } else {
+            currentActive[0].className = current[0].className.replace(" active", "");
+            this.className += " active"; 
+        }
     }); 
 }
 calculator();
